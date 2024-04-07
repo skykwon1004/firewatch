@@ -35,39 +35,56 @@
 
         #parallax__title h1 {
             font-size: 30px;
-            border-bottom: 1px dashed #fff;
             margin-bottom: 10px;
             padding-bottom: 5px;
             font-weight: 400;
             display: inline-block;
         }
 
-        #parallax__title p {
-            font-size: 16px;
+        #parallax__nav {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-align: center;
         }
 
-        #parallax__title ul {
-            margin-top: 10px;
-        }
-
-        #parallax__title li {
+        #parallax__nav li {
+            list-style: none;
             display: inline;
         }
 
-        #parallax__title li a {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 1px dashed #fff;
+        #parallax__nav li a {
             display: inline-block;
+            width: auto;
+            height: 30px;
+            padding: 5px 24px;
             text-align: center;
-            line-height: 20px;
-            font-size: 12px;
+            line-height: 30px;
+            transition: all 0.3s;
         }
 
-        #parallax__title li.active a {
+        #parallax__nav li a.active {
             background: #fff;
             color: #000;
+            border-radius: 30px;
+        }
+
+        #parallax__nav.is-active li a {
+            width: auto;
+        }
+
+        #parallax__nav li a {
+            width: auto;
+            transition: all 0.3s;
+        }
+
+        #parallax__nav.is-active li a {
+            width: auto;
+            padding: 5px 10px;
         }
 
         #section1 {
@@ -143,14 +160,16 @@
 <body>
     <header id="parallax__title">
         <h1>FireWatch</h1>
-        <ul>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-        </ul>
+        <!-- //parallax__title  -->
+        <nav id="parallax__nav">
+            <ul>
+                <li><a href="#section1" class="active">FIREWATCH</a></li>
+                <li><a href="#section2">DEVELOPMENT BLOG</a></li>
+                <li><a href="#section3">QUARTERLY REVIEW</a></li>
+            </ul>
+        </nav>
+        <!-- //parallax__nav -->
     </header>
-    <!-- //parallax__title  -->
 
     <main>
         <section id="section1">
@@ -167,13 +186,11 @@
         <!-- //section1 -->
 
         <section id="section2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+            <h2>AVAILABLE NOW FOR $19.99</h2>
+            <button>WINDOWS MAC LINUX</button>
+            <button>NINTENDO SWITCH</button>
+            <button>PLAYSTATION 4</button>
+            <button>XBOX ONE</button>
         </section>
     </main>
 
@@ -201,6 +218,15 @@
             pin: true,
             markers: false,
             anticipatePin: 1
+        });
+
+        ScrollTrigger.create({
+            start: "top -80",
+            end: 99999,
+            toggleClass: {
+                className: "is-active",
+                targets: "#parallax__nav"
+            }
         });
     </script>
 </body>
