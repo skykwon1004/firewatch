@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Watch</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        body {
+            color: #fff;
+            font-family: "NexonLv1Gothic";
+            font-weight: 300;
+            background-color: #ffaf1b;
+        }
+
+        #parallax__title {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            z-index: 1000;
+        }
+
+        #parallax__title h1 {
+            font-size: 30px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-weight: 400;
+            display: inline-block;
+        }
+
+        #parallax__title p {
+            font-size: 16px;
+        }
+
+        #parallax__title ul {
+            margin-top: 10px;
+        }
+
+        #parallax__title li {
+            display: inline;
+        }
+
+        #parallax__title li a {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px dashed #fff;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        #parallax__title li.active a {
+            background: #fff;
+            color: #000;
+        }
+
+        #section1 {
+            position: relative;
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+        }
+
+        .parallax__item__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1000px;
+            background-position: center;
+        }
+
+        .i1 {
+            background-image: url(img/parallax0.png);
+        }
+
+        .i2 {
+            background-image: url(img/parallax1.png);
+        }
+
+        .i3 {
+            background-image: url(img/parallax2.png);
+        }
+
+        .i4 {
+            background-image: url(img/parallax3.png);
+        }
+
+        .i5 {
+            background-image: url(img/parallax4.png);
+        }
+
+        .i6 {
+            background-image: url(img/parallax5.png);
+        }
+
+        .i7 {
+            background-image: url(img/parallax6.png);
+        }
+
+        .i8 {
+            background-image: url(img/parallax7.png);
+        }
+
+        .i9 {
+            background-image: url(img/parallax8.png);
+            position: absolute;
+        }
+
+        .i9::after {
+            content: "";
+            position: absolute;
+            top: 1000px;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            background: #210002;
+        }
+
+        #section2 {
+            background: #210002;
+            padding: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="parallax__title">
+        <h1>FireWatch</h1>
+        <ul>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </header>
+    <!-- //parallax__title  -->
+
+    <main>
+        <section id="section1">
+            <div class="parallax__item__img i1"></div>
+            <div class="parallax__item__img i2"></div>
+            <div class="parallax__item__img i3"></div>
+            <div class="parallax__item__img i4"></div>
+            <div class="parallax__item__img i5"></div>
+            <div class="parallax__item__img i6"></div>
+            <div class="parallax__item__img i7"></div>
+            <div class="parallax__item__img i8"></div>
+            <div class="parallax__item__img i9"></div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ipsa?</p>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        const ani1 = gsap.timeline();
+        ani1.to("#section1 .i9", { y: -80 }, "a")
+            .to("#section1 .i8", { y: -80 }, "a")
+            .to("#section1 .i7", { y: 20 }, "a")
+            .to("#section1 .i6", { y: 40 }, "a")
+            .to("#section1 .i5", { y: 60 }, "a")
+            .to("#section1 .i4", { y: 80 }, "a")
+            .to("#section1 .i3", { y: 100 }, "a")
+            .to("#section1 .i2", { y: 100 }, "a")
+            .to("#section1 .i1", { y: 100 }, "a")
+
+
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: "#section1",
+            start: "top top",
+            end: "+=6000",
+            scrub: true,
+            pin: true,
+            markers: false,
+            anticipatePin: 1
+        });
+    </script>
+</body>
+
+</html>
