@@ -6,166 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fire Watch</title>
-
+    <link href="reset.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        body {
-            color: #fff;
-            font-family: "NexonLv1Gothic";
-            font-weight: 300;
-            background-color: #ffaf1b;
-        }
-
-        #parallax__title {
-            position: fixed;
-            left: 20px;
-            top: 20px;
-            z-index: 1000;
-        }
-
-        #parallax__title h1 {
-            font-size: 30px;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            font-weight: 400;
-            display: inline-block;
-        }
-
-        #parallax__nav {
-            position: fixed;
-            right: 20px;
-            top: 20px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-align: center;
-        }
-
-        #parallax__nav li {
-            list-style: none;
-            display: inline;
-        }
-
-        #parallax__nav li a {
-            display: inline-block;
-            width: auto;
-            height: 30px;
-            padding: 5px 24px;
-            text-align: center;
-            line-height: 30px;
-            transition: all 0.3s;
-        }
-
-        #parallax__nav li a.active {
-            background: #fff;
-            color: #000;
-            border-radius: 30px;
-        }
-
-        #parallax__nav.is-active li a {
-            width: auto;
-        }
-
-        #parallax__nav li a {
-            width: auto;
-            transition: all 0.3s;
-        }
-
-        #parallax__nav.is-active li a {
-            width: auto;
-            padding: 5px 10px;
-        }
-
-        #section1 {
-            position: relative;
-            width: 100%;
-            height: 1000px;
-            overflow: hidden;
-        }
-
-        .parallax__item__img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1000px;
-            background-position: center;
-        }
-
-        .i1 {
-            background-image: url(img/parallax0.png);
-        }
-
-        .i2 {
-            background-image: url(img/parallax1.png);
-        }
-
-        .i3 {
-            background-image: url(img/parallax2.png);
-        }
-
-        .i4 {
-            background-image: url(img/parallax3.png);
-        }
-
-        .i5 {
-            background-image: url(img/parallax4.png);
-        }
-
-        .i6 {
-            background-image: url(img/parallax5.png);
-        }
-
-        .i7 {
-            background-image: url(img/parallax6.png);
-        }
-
-        .i8 {
-            background-image: url(img/parallax7.png);
-        }
-
-        .i9 {
-            background-image: url(img/parallax8.png);
-            position: absolute;
-        }
-
-        .i9::after {
-            content: "";
-            position: absolute;
-            top: 1000px;
-            left: 0;
-            width: 100%;
-            height: 500px;
-            background: #210002;
-        }
-
-        #section2 {
-            background: #210002;
-            padding: 100px;
-        }
-    </style>
 </head>
 
 <body>
     <header id="parallax__title">
-        <h1>FireWatch</h1>
+        <h1>CAMPO SANTO</h1>
         <!-- //parallax__title  -->
         <nav id="parallax__nav">
             <ul>
                 <li><a href="#section1" class="active">FIREWATCH</a></li>
-                <li><a href="#section2">DEVELOPMENT BLOG</a></li>
-                <li><a href="#section3">QUARTERLY REVIEW</a></li>
+                <li><a href="#">DEVELOPMENT BLOG</a></li>
+                <li><a href="#">QUARTERLY REVIEW</a></li>
             </ul>
         </nav>
         <!-- //parallax__nav -->
@@ -186,27 +40,98 @@
         <!-- //section1 -->
 
         <section id="section2">
-            <h2>AVAILABLE NOW FOR $19.99</h2>
-            <button>WINDOWS MAC LINUX</button>
-            <button>NINTENDO SWITCH</button>
-            <button>PLAYSTATION 4</button>
-            <button>XBOX ONE</button>
+            <div class="inner">
+                <h2 class="sub__title">AVAILABLE NOW FOR $19.99</h2>
+                <div class="btn__wapper">
+                    <a class="btn1" href="https://store.steampowered.com/app/383870/Firewatch/" target="_blank">
+                        <img src="/img/buyicon_pc.png" alt="Buy on Steam">
+                        WINDOWS / MAC / LINUX
+                    </a>
+                    <a class="btn2" href="https://www.nintendo.com/us/store/products/firewatch-switch/" target="_blank">
+                        <img src="/img/buyicon_switch.png" alt="Buy on Steam">
+                        NINTENDO SWITCH
+                    </a>
+                    <a class="btn3" href="https://store.playstation.com/en-us/search/firewatch" target="_blank">
+                        <img src="/img/buyicon_ps4.png" alt="Buy on Steam">
+                        PLAYSTATION 4
+                    </a>
+                    <a class="btn4" href="https://www.xbox.com/ko-kr/games/store/firewatch/bqqkg9h2stc0?rtc=1"
+                        target="_blank">
+                        <img src="/img/buyicon_xbone.png" alt="Buy on Steam">
+                        XBOX ONE
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3">
+            <div class="inner">
+                <div class="content_product_yotube">
+                    <div class="iframe_wrap">
+                        <div class="iframe_case">
+                            <iframe id="video" width="100%" height="315" src="https://www.youtube.com/embed/cXWlgP5hZzc"
+                                frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section4">
+            <div class="inner">
+                <h2 class="sub__title">
+                    Firewatch is a mystery set in the Wyoming wilderness, where your only emotional
+                    lifeline is the
+                    person on the other end of a handheld radio.
+                </h2>
+                <p class="sub__desc">
+                    The year is 1989.
+
+                    You are a man named Henry who has retreated from your messy life to work as a fire lookout in the
+                    Wyoming wilderness. Perched atop a mountain, it's your job to find smoke and keep the wilderness
+                    safe.
+
+                    An especially hot, dry summer has everyone on edge. Your supervisor, a woman named Delilah, is
+                    available to youat all times over a small, handheld radio—and is your only contact with the world
+                    you've left behind.
+
+                    But when something strange draws you out of your lookout tower and into the world below, you'll
+                    explore a wild and unknown environment, facing questions and making interpersonal choices that can
+                    build or destroy the only meaningful relationship you have.
+                </p>
+            </div>
+        </section>
+
+        <section class="inner">
+            <img src="img/firewatch-1.jpg" alt="">
+            <img src="img/firewatch-2.jpg" alt="">
+            <img src="img/firewatch-3.jpg" alt="">
+            <img src="img/firewatch-4.jpg" alt="">
         </section>
     </main>
+
+    <footer>
+        <div class="footer__inner inner">
+            <p>&copy 2024 CAMPO SANTO, IN COOPERATION WITH PANIC.</p>
+            <p>FIREWATCH IS A TRADEMARK OF CAMPO SANTO.</p>
+            <p>NINTENDO SWITCH IS A TRADEMARK OF NINTENDO.</p>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script>
         const ani1 = gsap.timeline();
-        ani1.to("#section1 .i9", { y: -80 }, "a")
-            .to("#section1 .i8", { y: -80 }, "a")
+        ani1.to("#section1 .i9", { y: -180 }, "a")
+            .to("#section1 .i8", { y: -180 }, "a")
             .to("#section1 .i7", { y: 20 }, "a")
             .to("#section1 .i6", { y: 40 }, "a")
             .to("#section1 .i5", { y: 60 }, "a")
             .to("#section1 .i4", { y: 80 }, "a")
             .to("#section1 .i3", { y: 100 }, "a")
-            .to("#section1 .i2", { y: 100 }, "a")
-            .to("#section1 .i1", { y: 100 }, "a")
+            .to("#section1 .i2", { y: 200 }, "a")
+            .to("#section1 .i1", { y: 200 }, "a")
 
 
         ScrollTrigger.create({
@@ -228,6 +153,24 @@
                 targets: "#parallax__nav"
             }
         });
+
+        //02 : 이미지를 순차적으로 나오기
+        // const ani2 = gsap.timeline();
+        // ani2.from("#section2 .btn1", { y: -100, autoAlpha: 0, duration: 1 }, "a")
+        //     .from("#section2 .btn2", { y: -100, autoAlpha: 0, duration: 1 }, "a")
+        //     .from("#section2 .btn3", { y: 100, autoAlpha: 0, duration: 1 }, "b")
+        //     .from("#section2 .btn4", { y: 100, autoAlpha: 0, duration: 1 }, "b")
+
+        // ScrollTrigger.create({
+        //     animation: ani2,
+        //     trigger: "#section2",
+        //     start: "top top",
+        //     end: "+=1000",
+        //     scrub: true,
+        //     pin: true,
+        //     anticipatePin: 1,
+        //     markers: true
+        // });
     </script>
 </body>
 
